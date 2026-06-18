@@ -1,7 +1,12 @@
-let rows = 5
+function parent() {
+    let count = 0
 
-for (let index = 0; index < rows; index++) {
-    const space = "-".repeat(rows - index - 1)
-    const star = "*".repeat(2 * index + 1)
-    console.log(space + star)
+    return function child() {
+        count++;
+        return count;
+    }
 }
+
+const fun = parent()
+console.log(fun())
+console.log(fun())
