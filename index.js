@@ -1,12 +1,11 @@
-function parent() {
-    let count = 0
+var a = 1
 
-    return function child() {
-        count++;
-        return count;
-    }
+function test() {
+    let a = 10
+    console.log(a)
 }
 
-const fun = parent()
-console.log(fun())
-console.log(fun())
+
+test()
+
+console.log(a)
