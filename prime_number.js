@@ -21,7 +21,15 @@ function isPrime(n) {
     return true
 }
 
-console.log(isPrime(11)); // Output: true
-console.log(isPrime(4));  // Output: false
-console.log(isPrime(1));  // Output: fal
+function getPrimesUpTo(max) {
+    let primes = [];
+    for (let i = 2; i <= max; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
+    return primes;
+}
 
+
+console.log(getPrimesUpTo(20)); 
